@@ -1,14 +1,29 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html>
     <head>
         <meta name="viewport" content="width=device-width">
-        <title>CIT 3606 Lab 2 JS Intro</title>
+        <title>CIT 3606 Lab 2 Intro</title>
         <link href="style.css" rel="stylesheet" type="text/css" />
     </head>
     <body>
-      
-      
+        <script>
+            var today = new Date();
+            time = today.getHours();
+            if (time < "12") {
+                alert("Good morning!");
+            } else if (time >= "12:00" || time < "18:00") {
+                alert("Good afternoon!");
+            } else {
+                alert("Good evening!");
+            }
 
-        
+            var amount = prompt("Enter your amount in USD:");
+            var currency = prompt("Enter your target currency ( pound sterling):");
+            var converted = amount * 0.79;
+            alert (amount + " USD is " + converted + " pound sterling.");
+
+            
+        </script>
+              
     </body>
 </html>

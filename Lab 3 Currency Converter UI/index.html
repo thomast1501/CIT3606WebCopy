@@ -11,21 +11,11 @@
       Name: <input type="text" id="username">
       <button class="button" onclick="hello()">Button1 </button>
       <button class="button2" onclick="bye()">Button2 </button>
-      <script>
-      function hello()
-      {
-      name = document.getElementById("username").value;
-      
-
-        alert("hi "+name)
-      }
-      function bye()
-      {
-
-        alert("bye");
-      }
-
-      </script>
+      <h2>Currency Converter</h2>
+      US currency : <input type="text" id="amount">
+      pound sterling currency : <input type="text" id="currency">
+      <button class="button3" onclick="convert()">Convert</button>
+      <div id="result" aria-live="polite" style="margin-top:12px;"></div>
 
       <!-- The JavaScript code is attached at the bottom of the page
            after the page is completely loaded. Write your code in script.js. -->

@@ -6,14 +6,32 @@
         <link href="style.css" rel="stylesheet" type="text/css" />
     </head>
     <body>
-      <!-- Add UI for Currency Converter -->
-      
-      <h2>Currency Converter</h2>
-      US currency : <input type="text" id="amount">
-      pound sterling currency : <input type="text" id="currency">
-      <button class="button3" onclick="convert()">Convert</button>
-      <div id="result" aria-live="polite" style="margin-top:12px;"></div>
+      Name: <input type = "text" id = "name" value = "Enter Name">
+      <button class= "button" onclick="hello()">Button1</button>
+      <button class= "button" onclick="bye()">Button2</button>
+      <script>
+       
+        function hello()
+        {
+          name = document.getElementById("name").value;
+          alert("Hello " + name);
+        }
+        function bye()
+        {
+          alert("Goodbye ");
+        }
+      </script>
 
+
+      <!-- Add UI for Currency Converter -->
+      <h2>USD to Pound Sterling Converter</h2>
+    <label for="usd">USD: </label>
+    <input type="text" id="usd" />
+    
+    <label for="ecd">Pound Sterling : </label>
+    <input type="text" id="ecd" />
+    
+    <button class="button" onclick="convert()">Convert</button>
       <!-- The JavaScript code is attached at the bottom of the page
            after the page is completely loaded. Write your code in script.js. -->
       <script src="script.js"></script>

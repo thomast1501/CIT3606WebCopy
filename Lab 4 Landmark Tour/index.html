@@ -6,10 +6,34 @@
         <link href="style.css" rel="stylesheet" type="text/css" />
     </head>
     <body>
+        <h1 id="myH1">Andrew Click this  </h1>
+        
       
-      
-     <!-- The JavaScript code is attached at the bottom of the page
-           after the page is completely loaded. Write your code in script.js. -->
-     <script src="script.js"></script> 
+     
+     <script>
+     
+     const myH1 = document.getElementById("myH1");
+        myH1.onmouseover =  function() {
+            myH1.style.color = "blue";
+            myH1.textContent ="Now move the mouse !";
+            myH1.style.fontSize = "xx-large";
+            myH1.style.backgroundColor = "yellow";
+
+        }
+
+        myH1.onmouseout = function() {
+            myH1.style.color = "black";
+            myH1.textContent ="good boy";
+            myH1.style.fontSize = "large";
+            myH1.style.backgroundColor = "white";
+
+        }
+
+     
+
+
+
+
+     </script> 
     </body>
 </html>

@@ -6,34 +6,37 @@
         <link href="style.css" rel="stylesheet" type="text/css" />
     </head>
     <body>
-        <h1 id="myH1">Andrew Click this  </h1>
+        <h1 id="myH1">LAB 4 </h1>
         
-      
-     
      <script>
-     
-     const myH1 = document.getElementById("myH1");
-        myH1.onmouseover =  function() {
-            myH1.style.color = "blue";
-            myH1.textContent ="Now move the mouse !";
-            myH1.style.fontSize = "xx-large";
-            myH1.style.backgroundColor = "yellow";
-
-        }
-
-        myH1.onmouseout = function() {
-            myH1.style.color = "black";
-            myH1.textContent ="good boy";
-            myH1.style.fontSize = "large";
-            myH1.style.backgroundColor = "white";
-
-        }
-
-     
-
-
-
 
      </script> 
+    <img id= "landmarkimage" src ="snow.jpg" alt="Fall leafs" width = "500" >
+
+    <form>
+        <input type="radio" id="snowradio" name="landmark" value="snow" checked onclick="changelandmark('snow')">
+        <label for="snowradio">Ski area in Stower Vermont.</label><br>
+  
+        <input type="radio" id="Leafradio" name="landmark" value="Leaf" checked onclick="changelandmark('leaf')">
+        <label for="Leafradio">A moutnain in Montpelier Vermont </label><br>
+  
+        <input type="radio" id="grandradio" name="landmark" value="grand" checked onclick="changelandmark('grand')">
+        <label for="grandradio">Grand Canyon in Arizona</label><br>
+    
+</form> 
+
+</body>
+</html>
+
+   <div class ="map description">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2844.39952223294!2d-72.78649692394865!3d44.52745157107409!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cb5917b8faaea15%3A0xa2fbbf1f063d7b3d!2sStowe%20Mountain%20Resort!5e0!3m2!1sen!2sus!4v1759161455172!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+        <div class="description">
+            <h2>Landmark Description</h2>
+            <p id="landmarkdescription">test</p>
+        
+    
+    
+        <script src=" script.js"></script>
     </body>
 </html>

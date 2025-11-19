@@ -1,16 +1,30 @@
 <form action="/new" method="post">
     Email: 
-     <input type="text"  name="email">
+     <input type="text"  name="email" maxlength="40">
       <br>
 
     Username: 
-     <input type="text"  name="username">
+     <input type="text"  name="username" maxlength="40">
       <br>
 
     Password: 
-     <input type="text"  name="password">
+     <input type="text"  name="password" maxlength="40">
       <br>
       
       <button type="submit">Submit</button>
       
  </form>
+
+ <a href="/formforget">Forgot Password?</a>
+
+
+
+
+
+
+ <form action="/retrieve" method="get">
+    Forgot Password Email: 
+     <input type="text"  name="email" maxlength="20">
+      <br>
+    <button type="submit">Submit</button>
+</form>

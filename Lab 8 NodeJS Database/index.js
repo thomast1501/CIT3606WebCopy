@@ -5,14 +5,13 @@ require('dotenv').config();
 const conn = mysql.createConnection({
   host: "mysql1-p2.ezhostingserver.com",
   database: "citdemo",
-  user: "elms",
-  password: "CIT4ever!"
+  user: process.env.DB_USER,
+  password: process.env.DB_PASSWORD
 });
 conn.connect((err) => {           // can move this into app.get and send
   if (err) throw err;
   console.log("Connected!");
 });
-
 
 
 app.get('/', function(req, res){
@@ -27,4 +26,36 @@ conn.query(sql, [lastname], function (err, result) {
 
 
 });
+
+var bodyParser = require('body-parser');
+app.use(bodyParser.urlencoded({extended:true}));
+
+app.get('/form', function(req, res){
+   res.sendFile(__dirname + "/form.html");
+});
+
+app.post('/submit', function(req, res){
+  const sql = 'SELECT * FROM students WHERE lastname = ?';
+  console.log("Form contents: " + req.body.lastname);
+  conn.query(sql, [req.body.lastname], function (err, result) {
+    if (err) throw err;
+    if (result.length == 0)  { res.send("no result"); }
+    else {  console.log(result);
+              // res.send(result);
+resultStr = "";  
+for (i = 0; i < result.length; i++) {
+      resultStr += result[i].firstname +  " " + 
+                           result[i].lastname + "<br>"  ;
+   }
+ res.send(resultStr);
+
+  // OR use map 
+  result.map((item) => {
+     resultStr += item.firstname + " "  + item.lastname;
+  });
+
+   }  }  );
+}); 
+
+
 app.listen(8080);
